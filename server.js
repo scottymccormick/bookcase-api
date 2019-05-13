@@ -1,10 +1,16 @@
-const express = require('express')
-const app     = express()
-const PORT    = 3001
+const express    = require('express')
+const bodyParser = require('body-parser')
+const app        = express()
+const PORT       = 3001
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/', (req, res) => {
   console.log('Home route accessed')
-  res.send('Reached home route')
+  res.json({
+    info: 'Reached home route'
+  })
 })
 
 app.listen(PORT, () => {

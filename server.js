@@ -6,8 +6,12 @@ const PORT       = 3001
 
 const db = require('./queries')
 
+const booksController = require('./controllers/booksController')
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+
+app.use('/books', booksController)
 
 app.get('/', (req, res) => {
   console.log('Home route accessed')

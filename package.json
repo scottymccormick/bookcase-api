@@ -10,7 +10,9 @@
   "author": "Scotty McCormick",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
+    "got": "^9.6.0",
     "pg": "^7.11.0"
   }
 }
